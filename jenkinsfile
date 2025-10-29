@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'vish-security-agent'
+        label 'aum-security-agent'
     }
     triggers {
         pollSCM('H/1 * * * *') // checks every 3 mins, or
