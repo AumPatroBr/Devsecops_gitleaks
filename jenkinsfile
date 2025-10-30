@@ -6,8 +6,13 @@ pipeline {
     environment {
         VAULT_ADDR = 'http://34.228.140.38:8400/'
     }
-
+    
     stages {
+        stage('Cleanup') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Checkout') {
             steps {
                 checkout scm
